@@ -4,7 +4,7 @@ public class CNPTest
 {
     private readonly CNP validCNP1 = new CNP(1800101420010);
     private readonly CNP validCNP2 = new CNP(1810101420019);
-    private readonly byte[] CNP1ByteArray = new byte[] { 1, 8, 0, 0, 1, 0, 1, 4, 2, 0, 0, 1, 0 };
+    private readonly byte[] CNP1ByteArray = [1, 8, 0, 0, 1, 0, 1, 4, 2, 0, 0, 1, 0];
 
     [Theory]
     [InlineData(0)]
@@ -41,7 +41,7 @@ public class CNPTest
     [Fact]
     public void ByteArrayConstructor_Rejects_BadDigitsValue()
     {
-        Assert.Throws<ArgumentException>(() => new CNP(new byte[] { 1, 8, 0, 0, 1, 0, 1, 4, 2, 0, 10, 1, 0 }));
+        Assert.Throws<ArgumentException>(() => new CNP([1, 8, 0, 0, 1, 0, 1, 4, 2, 0, 10, 1, 0]));
     }
 
     [Fact]
