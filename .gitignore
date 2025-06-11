@@ -1,0 +1,57 @@
+# .NET build artifacts
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragejson
+*.log
+
+# Rider and VS Code
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# ASP.NET secrets (if applicable)
+secrets.json
+
+# Dotnet CLI
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.symbols.nupkg
+
+# Logs
+*.log
+
+# VS for Mac
+.vscode/
+MonoDevelop/
+*.pidb
+
+# Others
+*.rej
+*.orig
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Global.json lock
+global.json.lock
