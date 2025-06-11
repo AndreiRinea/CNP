@@ -65,12 +65,15 @@ public class CNP : IEquatable<CNP>
 
     public override int GetHashCode()
     {
-        var hashCode = new HashCode();
-        for (int i = 0; i < 13; i++)
+        unchecked // allow overflow
         {
-            hashCode.Add(_digits[i]);
+            int hash = 17;
+            for (int i = 0; i < 13; i++)
+            {
+                hash = hash * 31 + _digits[i];
+            }
+            return hash;
         }
-        return hashCode.ToHashCode();
     }
 
     public override bool Equals(object? obj)
