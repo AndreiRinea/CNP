@@ -1,4 +1,18 @@
-﻿namespace CNP.Tests;
+﻿// Copyright 2025 Andrei Rinea
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+namespace CNP.Tests;
 
 public class CNPTest
 {
@@ -47,13 +61,15 @@ public class CNPTest
     [Fact]
     public void A_Valid_CNP_IsValidated()
     {
-        Assert.True(validCNP1.Validate());
+        var validationResult = validCNP1.Validate();
+        Assert.True(validationResult == ValidationError.None);
     }
 
     [Fact]
     public void Invalid_CNP_IsNotValidated()
     {
-        Assert.False(new CNP(1800101420011).Validate());
+        var bogusCnpValidationResult = new CNP(1800101420011).Validate();
+        Assert.False(bogusCnpValidationResult == ValidationError.None);
     }
 
     [Fact]

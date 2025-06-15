@@ -14,8 +14,15 @@
 
 namespace CNP;
 
-public enum Sex
+public enum ValidationError
 {
-    Male,
-    Female
+    None = 0,
+    ChecksumError = 1,
+    InvalidSexDigit = 2,
+    InvalidMonth = 4,
+    InvalidDay = 8,
+    InvalidDate = 16,
+    InvalidCounty = 32,
+    InvalidSequentialNumber = 64,
+    InvalidDateForCounty = 128
 }

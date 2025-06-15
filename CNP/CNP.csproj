@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AndreiRinea/CNP</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AndreiRinea/CNP</RepositoryUrl>
+    <Authors>Andrei Rinea</Authors>
+  </PropertyGroup>
+
 </Project>
